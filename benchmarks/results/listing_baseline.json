@@ -1,0 +1,65 @@
+{
+  "label": "baseline",
+  "results": [
+    {
+      "dataset_orders": 500,
+      "page_size": 10,
+      "returned": 10,
+      "sql_statements": 22,
+      "count_queries": 2,
+      "orm_rows_loaded": 142,
+      "peak_mem_kb": 435.1,
+      "median_latency_ms": 5.69
+    },
+    {
+      "dataset_orders": 500,
+      "page_size": 50,
+      "returned": 50,
+      "sql_statements": 87,
+      "count_queries": 2,
+      "orm_rows_loaded": 142,
+      "peak_mem_kb": 690.4,
+      "median_latency_ms": 11.4
+    },
+    {
+      "dataset_orders": 2000,
+      "page_size": 10,
+      "returned": 10,
+      "sql_statements": 22,
+      "count_queries": 2,
+      "orm_rows_loaded": 571,
+      "peak_mem_kb": 1271.2,
+      "median_latency_ms": 9.29
+    },
+    {
+      "dataset_orders": 2000,
+      "page_size": 50,
+      "returned": 50,
+      "sql_statements": 87,
+      "count_queries": 2,
+      "orm_rows_loaded": 571,
+      "peak_mem_kb": 1621.0,
+      "median_latency_ms": 15.34
+    },
+    {
+      "dataset_orders": 8000,
+      "page_size": 10,
+      "returned": 10,
+      "sql_statements": 22,
+      "count_queries": 2,
+      "orm_rows_loaded": 2286,
+      "peak_mem_kb": 4943.9,
+      "median_latency_ms": 25.74
+    },
+    {
+      "dataset_orders": 8000,
+      "page_size": 50,
+      "returned": 50,
+      "sql_statements": 85,
+      "count_queries": 2,
+      "orm_rows_loaded": 2286,
+      "peak_mem_kb": 4953.8,
+      "median_latency_ms": 32.07
+    }
+  ]
+}

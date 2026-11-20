@@ -1,0 +1,168 @@
+{
+  "label": "baseline",
+  "query": "SELECT * FROM orders WHERE status = :status AND payment_status = :payment ORDER BY order_date DESC LIMIT 20",
+  "results": [
+    {
+      "orders": 1000,
+      "query_plan": [
+        "SEARCH orders USING INDEX ix_orders_status_payment (status=? AND payment_status=?)",
+        "USE TEMP B-TREE FOR ORDER BY"
+      ],
+      "median_query_ms": 0.0861,
+      "bulk_insert_s": 0.0099,
+      "bulk_update_s": 0.0041,
+      "db_size_kb": 368.0,
+      "orders_index_count": 5,
+      "orders_indexes": {
+        "ix_orders_status": [
+          "status"
+        ],
+        "ix_orders_status_payment": [
+          "status",
+          "payment_status"
+        ],
+        "ix_orders_status_payment_created": [
+          "status",
+          "payment_status",
+          "created_at"
+        ],
+        "ix_orders_customer_id": [
+          "customer_id"
+        ],
+        "ix_orders_payment_status": [
+          "payment_status"
+        ]
+      },
+      "result_ids": [
+        715,
+        693,
+        419,
+        313,
+        178,
+        587,
+        95,
+        78,
+        156,
+        482,
+        361,
+        233,
+        283,
+        992,
+        553,
+        577,
+        833,
+        862,
+        602,
+        816
+      ]
+    },
+    {
+      "orders": 10000,
+      "query_plan": [
+        "SEARCH orders USING INDEX ix_orders_status_payment (status=? AND payment_status=?)",
+        "USE TEMP B-TREE FOR ORDER BY"
+      ],
+      "median_query_ms": 0.1775,
+      "bulk_insert_s": 0.096,
+      "bulk_update_s": 0.0149,
+      "db_size_kb": 2872.0,
+      "orders_index_count": 5,
+      "orders_indexes": {
+        "ix_orders_status": [
+          "status"
+        ],
+        "ix_orders_status_payment": [
+          "status",
+          "payment_status"
+        ],
+        "ix_orders_status_payment_created": [
+          "status",
+          "payment_status",
+          "created_at"
+        ],
+        "ix_orders_customer_id": [
+          "customer_id"
+        ],
+        "ix_orders_payment_status": [
+          "payment_status"
+        ]
+      },
+      "result_ids": [
+        715,
+        1841,
+        1602,
+        8342,
+        693,
+        5789,
+        2053,
+        8446,
+        1545,
+        419,
+        2379,
+        5772,
+        6882,
+        2933,
+        3503,
+        9259,
+        7675,
+        5758,
+        7175,
+        7417
+      ]
+    },
+    {
+      "orders": 50000,
+      "query_plan": [
+        "SEARCH orders USING INDEX ix_orders_status_payment (status=? AND payment_status=?)",
+        "USE TEMP B-TREE FOR ORDER BY"
+      ],
+      "median_query_ms": 1.319,
+      "bulk_insert_s": 0.5559,
+      "bulk_update_s": 0.0916,
+      "db_size_kb": 14184.0,
+      "orders_index_count": 5,
+      "orders_indexes": {
+        "ix_orders_status": [
+          "status"
+        ],
+        "ix_orders_status_payment": [
+          "status",
+          "payment_status"
+        ],
+        "ix_orders_status_payment_created": [
+          "status",
+          "payment_status",
+          "created_at"
+        ],
+        "ix_orders_customer_id": [
+          "customer_id"
+        ],
+        "ix_orders_payment_status": [
+          "payment_status"
+        ]
+      },
+      "result_ids": [
+        715,
+        16475,
+        1841,
+        36368,
+        1602,
+        16322,
+        41009,
+        14873,
+        27367,
+        8342,
+        13408,
+        693,
+        36127,
+        23655,
+        29379,
+        5789,
+        47356,
+        24732,
+        46379,
+        22319
+      ]
+    }
+  ]
+}
